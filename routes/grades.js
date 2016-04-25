@@ -3,12 +3,12 @@
 var express = require('express');
 var router = express.Router();
 
-var Grade = require('../models/grade');
+var Grades = require('../models/grade');
 
 
 router.route('/')
 .get((req, res) => {
-  Grade.get((err, grades) => {
+  Grades.get((err, grades) => {
     if(err){
       return res.status(400).send(err);
     }
@@ -16,7 +16,7 @@ router.route('/')
   });
 })
 .post((req, res) => {
-  Grade.create(req.body, err => {
+  Grades.create(req.body, err => {
     if(err){
       return res.status(400).send(err);
     }
@@ -24,7 +24,17 @@ router.route('/')
   });
 });
 
+router.put('/:id/edit', (req, res) => {
+  Grades.edit(req.params.id, (err, newScore) => {
+    if(err){
+      return res.status(400).send(err);
+    }
+    res.send({newScore: newScore});
+  });
+});
+
 module.exports = router;
+
 //
 // //////
 //

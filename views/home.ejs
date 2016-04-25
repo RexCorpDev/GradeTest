@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Grades App</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+
+  <script src="/bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="main.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="container text-center">
+    <h1>
+      Grades App
+      <br>
+      <hr>
+      <button class="newGradeModal btn">New Grade</button>
+    </h1>
+  </div>
+
+
+  <div class="modal fade newGradeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="newGradeForm">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">New Grade</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="studentName">Student Name</label>
+              <input type="text" class="form-control" id="gradeName" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Score</label>
+              <input type="number" class="form-control" id="gradeScore" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Total</label>
+              <input type="number" class="form-control" id="gradeTotal" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add Grade</button>
+          </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+
+
+</body>
+</html>
