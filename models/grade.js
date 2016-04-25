@@ -60,7 +60,7 @@ exports.edit = function(id, cb) {
 
     var newScore = grade.score;
 
-    db.run(`UPDATE grades SET score = ? WHERE id = ?`, newScore, id, (err) => {
+    db.run("UPDATE grades SET score = ? WHERE id = ?", newScore, id, (err) => {
       if(err) return cb(err);
       cb(null, newScore);
     });

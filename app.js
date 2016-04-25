@@ -7,7 +7,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
 
-var Grades = require('../models/grade');
+var Grades = require('./models/grade');
 
 app.set('view engine', 'ejs');
 
